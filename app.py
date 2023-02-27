@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-# Lendo as bases de dados
+# Lendo as bases de dados v
 df_vendas = pd.read_excel("Vendas.xlsx")
 df_produtos = pd.read_excel("Produtos.xlsx")
 
@@ -52,7 +52,7 @@ def main():
     with col2:
         st.metric("Lucro", lucro)
     with col3:
-        st.metric("Total Clientes", )
+        st.metric("Total Clientes", df["ID Cliente"].nunique())
 
     col1, col2 = st.columns(2)
 
@@ -71,4 +71,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    #v2
